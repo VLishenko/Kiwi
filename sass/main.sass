@@ -1,0 +1,428 @@
+*::-webkit-input-placeholder
+	color: #999
+	opacity: 1
+
+*:-moz-placeholder
+	color: #999
+	opacity: 1
+
+*::-moz-placeholder 
+	color: #999
+	opacity: 1
+
+*:-ms-input-placeholder 
+	color: #999
+	opacity: 1
+*
+	outline: none !important
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid,
+body select:focus:required:invalid
+
+body input:required:valid,
+body textarea:required:valid
+
+*
+	margin: 0
+	padding: 0
+
+html, 
+body
+	width: 100%
+	height: 100%
+
+body
+	font-family: "RobotoRegular", sans-serif
+	font-size: 16px
+	background: linear-gradient(to bottom, #ffd600 0%,#ffc300 100%)
+	margin: 0
+	background-repeat: no-repeat
+	background-attachment: fixed
+
+h1, .h1, h2, .h2, h3, .h3
+	margin: 0
+
+.line
+	content: ''
+	height: 1px
+	width: 100%
+	background-color: rgba(0,0,0,.1)
+
+.border-right-md
+	border-right: 1px solid rgba(0,0,0,.1)
+
+.flex-center-center
+	display: flex
+	align-items: center
+	justify-content: center
+
+.flex-bottom
+	display: flex
+	align-items: flex-end
+
+.flex-left-center
+	display: flex
+	align-items: center
+	justify-content: flex-start
+
+.flex-wrap
+	display: flex
+	flex-wrap: wrap
+
+.flex-column
+	display: flex
+	flex-direction: column
+
+.flex-space-around
+	display: flex
+	justify-content: space-around
+
+.float-right
+	float: right
+
+.margin-bottom-10
+	margin-bottom: 10px
+
+.margin-5vh-0
+	margin: 5vh 0px
+
+.margin-10
+	margin: 10px
+
+.margin-top-10
+	margin-top: 10px
+
+.padding-top-20
+	padding-top: 20px
+
+.visible-sm
+	display: none
+
+//Main Header
+.main-header
+	&__title
+		font-size: 50px
+		text-transform: uppercase
+		font-family: 'RobotoBold'
+	&__sub-title 
+		font-size: 21px
+
+//Header Animation
+.plane-animation
+	width: 350px
+	margin: auto
+	position: relative
+
+	&--margin
+		margin: 10px auto
+
+	&__airplane
+		background-image: url("../images/airplane.svg")
+		background-repeat: no-repeat
+		background-position: center right
+		position: absolute
+		top: 4%
+		left: 0
+		width: 100%
+		height: 100%
+		background-size: contain
+		transform: translate3d(-100%,-3px,0)
+		opacity: 0
+		transition: transform 2s ease-out,opacity .5s ease,-webkit-transform 2s ease-out
+
+	&__contrail
+		position: absolute
+		height: 5%
+		width: calc(100% - 52px)
+		left: 0
+		top: 47%
+		transition: opacity 3s ease-out
+		opacity: 1
+		background: linear-gradient(90deg,hsla(0,0%,100%,0) 10%,#ffd600)
+		border-radius: 10px
+
+.plane-animation.animate 
+	.plane-animation__airplane
+		opacity: 1
+		transform: translate3d(0,-3px,0)
+
+	.plane-animation__contrail
+		opacity: 0
+
+// Search Form
+.search-form
+	&__field
+		display: inline-block
+		width: 50%
+		padding: 10px 5px 0
+		float: left
+		box-sizing: border-box
+		input,
+		select,
+		option
+			width: 100%
+			height: 40px
+			font-size: 16px
+			background-color: #FFF
+			border: none
+			padding: 0 45px
+		&:nth-child(odd)
+			padding-left: 0px
+		&:nth-child(even)
+			padding-right: 0
+
+		i
+			position: absolute
+			top: 3px
+			z-index: 10
+		i:not(.clean-icon)
+			left: 0
+		i.clean-icon
+			right: 0
+			margin-right: 3px
+			&:hover
+				color: #ff4747
+
+		label
+			position: relative
+			display: inline-block
+			width: 100%
+			cursor: pointer
+			i
+				font-size: 34px
+				color: #95989E
+				transition: all .3s ease
+			.icon-departures,
+			.icon-arrivals
+				margin-left: 4px
+
+	&__submit
+		input
+			position: relative
+			height: 50px
+			background-color: #2b303d
+			border: none
+			padding: 5px 40px
+			box-shadow: 0 3px 0 #ccab00
+			border-radius: 3px
+			font-family: 'RobotoRegular'
+			color: #fff
+			font-size: 25px
+			margin: 10px
+			&:hover
+				top: 1px
+				box-shadow: 0 2px 0 #ccab00
+			
+.search-form__active--blue.active
+	i
+		color: #46a5ca
+	
+	input,
+	select,
+	.select2-selection
+		transition: all .3s ease
+		box-shadow: 0px 0px 3px 2px #46a5ca
+
+.search-form__active--green.active
+	i
+		color: #01bba5
+	
+	input,
+	select,
+	.select2-selection
+		transition: all .3s ease
+		box-shadow: 0px 0px 3px 2px #01bba5	
+
+.hidden-icon
+	opacity: 0 !important
+	z-index: -1 !important
+
+//Select2 Styles
+.select2-dropdown
+	border: none
+	margin-top: 3px
+.select2-selection__arrow
+	display: none
+.select2-container--default .select2-selection--single
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	width: 100%
+	height: 40px
+	font-size: 16px
+	background-color: #FFF
+
+	border: none
+	padding: 0 45px
+	border-radius: 0
+.select2-container .select2-selection--single .select2-selection__rendered
+	padding: 0
+
+//DataPicker Styles
+.ui-datepicker
+	z-index: 10 !important
+.ui-widget.ui-widget-content
+	border-radius: 0
+	margin-top: 3px
+
+// Search Result
+.search-result-item
+	background-color: #fff
+	width: 100%
+	flex-wrap: wrap
+
+	&__time
+		position: relative
+		display: inline-block
+		padding: 0px 20px
+		background-color: #F6F6F8
+		font-size: 24px
+		font-family: 'RobotoMedium'
+		color: #333
+		&:after
+			position: absolute
+			top: 0
+			right: -34px
+			content: ''
+			display: inline-block
+			border-style: solid
+			border-width: 34px 0 0 34px
+			border-color: transparent transparent transparent #f6f6f8
+
+	&__airport
+		background-color: #e9eaeb
+		height: 50px
+		padding: 0 10px
+		margin: 2px 0
+		&--padding
+			padding-left: 30px
+	
+	&__trip-time
+		background-color: #555964
+		height: 50px
+		color: #fff
+		font-family: 'RobotoMedium'
+		margin: 2px 0
+
+		&--padding
+			padding-left: 20px
+
+	&__select-btn
+		width: 100%
+		a
+			position: relative
+			background-color: #ffd600
+			color: #333
+			padding: 6px 3px 6px 10px
+			display: flex
+			width: 100px
+			align-items: center
+			justify-content: center
+			text-decoration: none
+			border-radius: 3px
+			box-shadow: 0 3px 0 #ccab00
+			&:hover
+				top: 1px
+				box-shadow: 0 2px 0 #ccab00
+			span
+				padding-right: 10px
+			i
+				font-size: 21px
+				
+
+
+
+	&__right-arrow
+		position: relative
+		&:before
+			content: ""
+			border-style: solid
+			border-width: 28px 0 28px 23px
+			border-color: transparent transparent transparent #fff
+			position: absolute
+			top: -3px
+			right: -23px
+			z-index: 1
+		&:after
+			content: ""
+			border-style: solid
+			border-width: 25px 0 25px 20px
+			border-color: transparent transparent transparent #e9eaeb
+			position: absolute
+			top: 0px
+			right: -20px
+			z-index: 10
+		&--white-light-grey
+			&:after
+				border-color: transparent transparent transparent #e9eaeb
+		&--white-dark-grey
+			&:after
+				border-color: transparent transparent transparent #555964
+
+.search-result-from,
+.search-result-from-to
+	width: 40%
+
+.search-result-from-time
+	width: 20%
+
+.search-result-from--flex-order
+	order: 0
+.search-result-from-time--flex-order
+	order: 1
+.search-result-from-to--flex-order
+	order: 2
+.search-result-item__select-btn--flex-order
+	order: 3
+	
+.search-result-info
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+	color: #999ca5
+	font-size: 12px
+	border-bottom: 1px solid #e9eaeb
+	margin-bottom: 3px
+	strong
+		font-family: 'RobotoBold'
+		font-size: 15px
+	&__price
+		font-size: 32px
+		font-family: 'RobotoBold'
+
+	&__title
+		width: 100%
+
+	&__company
+		
+		img
+			height: 20px
+			margin-right: 5px
+			float: left
+
+	& > div
+		padding: 2px 20px
+		position: relative
+		&:not(:last-child)
+			border-right: 1px solid #e9eaeb
+
+//Flight Info Animation
+.fligth-info-animation
+	background-color: #2b303d
+	color: #fff
+	// text-align: center
+	height: 33px
+	//margin-top: 10px
+	font-size: 20px
+	display: flex
+	align-items: center
+	// justify-content: center
+	padding: 0 10px
+	text-transform: uppercase

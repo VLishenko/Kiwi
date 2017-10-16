@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Kiwi.com | Find Cheap Flights & Discover New Destinations</title>
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-typography.min.css" />
+	<link rel="stylesheet" href="fonts/Kiwi-font/style.css" />
+	<link rel="stylesheet" href="libs/jquery-datepicker/jquery-ui.css" />
+	<link rel="stylesheet" href="libs/jquery-datepicker/jquery-ui.theme.css" />
+	<link rel="stylesheet" href="libs/select2-4.0.4/css/select2.css" />
+
+	
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/media.css" />
+</head>
+<body>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	
+	<!-- Start Main Header -->
+	<header class="main-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 margin-5vh-0">
+					
+					<!-- Start Title Animation -->
+					<div class="plane-animation plane-animation--margin">
+						<h1 class="main-header__title text-center">Kiwi&middot;com</h1>
+
+						<div class="plane-animation__airplane">
+							<div class="plane-animation__contrail"></div>
+						</div>
+
+					</div>
+					<!-- End Title Animation -->
+
+					<div class="main-header__sub-title text-center">Find Cheap Flights & Discover New Destinations</div>
+
+				</div>
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+		<div class="line"></div>
+	</header>
+	<!-- End Main Header -->
+
+	<section>
+		<div class="container">
+			<div class="row flex-wrap">
+				<div class="col-md-6 border-right-md padding-top-20">
+
+					<h2>Flights</h2>
+
+					<!-- Start Serach From -->
+					<form action="" method="POST" class="search-form" id="search-form">
+						
+						<div class="search-form__field search-form__active--blue">
+							<label for="field-from">
+								<i class="icon-place-departures"></i>
+								<select id="field-from" name="from-departures" required>
+									<option></option>
+									<option value="New York">New York</option>
+									<option value="Nairobi">Nairobi</option>
+									<option value="Beijing">Beijing</option>
+									<option value="Yokohama">Yokohama</option>
+									<option value="Tehran">Tehran</option>
+									<option value="Casablanca">Casablanca</option>
+									<option value="Chester">Chester</option>
+									<option value="London">London</option>
+									<option value="Bangkok">Bangkok</option>
+								</select>
+								<i class="clean-icon icon-delete hidden-icon"></i>
+							</label>
+						</div>
+
+						<div class="search-form__field search-form__active--green">
+							<label for="field-to">
+								<i class="icon-place-arrivals"></i>
+								<select id="field-to" name="to-departures" required>
+									<option></option>
+									<option value="New York">New York</option>
+									<option value="Nairobi">Nairobi</option>
+									<option value="Beijing">Beijing</option>
+									<option value="Yokohama">Yokohama</option>
+									<option value="Tehran">Tehran</option>
+									<option value="Casablanca">Casablanca</option>
+									<option value="Chester">Chester</option>
+									<option value="London">London</option>
+									<option value="Bangkok">Bangkok</option>
+								</select>
+								<i class="clean-icon icon-delete hidden-icon"></i>
+							</label>
+						</div>
+
+						<div class="search-form__field search-form__active--blue">
+							<label for="field-departure">
+								<i class="icon-departures"></i>
+								<input type="text" name="departure-date" placeholder="Departure Date" id="field-departure" required>
+								<i class="clean-icon icon-delete hidden-icon"></i>
+							</label>
+						</div>
+
+						<div class="search-form__field search-form__active--green">
+							<label for="field-return">
+								<i class="icon-arrivals"></i>
+								<input type="text" name="return-date" placeholder="Return Date" id="field-return">
+								<i class="clean-icon icon-delete hidden-icon"></i>
+							</label>
+						</div>
+
+						<div class="search-form__submit text-center">
+							<input type="submit" value="Search Flights">
+						</div>
+
+					</form>
+					<!-- End Serach From -->
+				</div>
+				
+				<div class="col-md-6 search-result-wrapper padding-top-20">
+					<!-- Start Search Result BLock -->
+					<div class="fligth-info-animation" id="fligth-info-animation">Best Deals</div>
+
+					<div class="search-result margin-top-10">
+						<!-- Start Seatch Result Item -->
+						<div class="search-result-item flex-bottom margin-bottom-10">
+							
+							<!-- Start Item Details -->
+							<div class="search-result-info">
+								<div class="search-result-info__price flex-column flex-space-around">
+									95 &euro;
+								</div>
+								
+								<div class="search-result-info__company flex-wrap flex-column flex-space-around">
+									<div class="search-result-info__title">Company</div>
+
+									<div class="">
+										<img src="https://images.kiwi.com/airlines/64/FR.png" alt="">
+										<strong>Ryanair</strong>
+									</div>
+								</div>
+
+								<div class="search-result-info__class flex-column flex-space-around">
+									<div class="search-result-info__title">Class</div>
+									<strong>Busines</strong>	
+								</div>
+
+								<div class="search-result-info__date flex-column flex-space-around">
+									<div class="search-result-info__title">Date</div>
+									<strong>10/17/2017</strong>	
+								</div>
+
+							</div>
+							<!-- End Item Details -->
+
+							<!-- Start Search Result From -->
+							<div class="search-result-from search-result-from--flex-order">
+								<div class="search-result-item__time">
+									17:00
+								</div>
+							
+
+								<div class="search-result-item__airport search-result-item__right-arrow search-result-item__right-arrow--white-light-grey flex-left-center">
+									Long Beach
+								</div>
+							</div>
+							<!-- End Search Result From -->
+
+							<!-- Start Search Result To -->
+							<div class="search-result-from-to search-result-from-to--flex-order">
+								<div class="search-result-item__time">
+									21:00
+								</div>
+
+								<div class="search-result-item__airport search-result-item__airport--padding flex-left-center">
+									New York
+								</div>
+							</div>
+							<!-- End Search Result To -->
+
+							<!-- Start Search Result Trip Time -->
+							<div class="search-result-from-time search-result-from-time--flex-order">
+								<div class="search-result-item__trip-time flex-center-center search-result-item__trip-time--padding search-result-item__right-arrow search-result-item__right-arrow--white-dark-grey">
+									<span class="visible-sm">Flight Time:&nbsp;</span> 5h 26m
+								</div>
+							</div>
+							<!-- End Search Result Trip Time -->
+ 
+							<div class="search-result-item__select-btn search-result-item__select-btn--flex-order">
+								<a href="#" class="margin-10 float-right">
+									<span>Select</span> 
+									<i class="icon-keyboard_arrow_right"></i>
+								</a>
+							</div>
+
+						</div>
+						<!-- End Seatch Result Item -->
+
+						<!-- Start Seatch Result Item -->
+						<div class="search-result-item flex-bottom margin-bottom-10">
+							
+							<!-- Start Item Details -->
+							<div class="search-result-info">
+								<div class="search-result-info__price flex-column flex-space-around">
+									61 &euro;
+								</div>
+								
+								<div class="search-result-info__company flex-wrap flex-column flex-space-around">
+									<div class="search-result-info__title">Company</div>
+
+									<div class="">
+										<img src="https://images.kiwi.com/airlines/64/FR.png" alt="">
+										<strong>Ryanair</strong>
+									</div>
+								</div>
+
+								<div class="search-result-info__class flex-column flex-space-around">
+									<div class="search-result-info__title">Class</div>
+									<strong>First</strong>	
+								</div>
+
+								<div class="search-result-info__date flex-column flex-space-around">
+									<div class="search-result-info__title">Date</div>
+									<strong>10/25/2017</strong>	
+								</div>
+
+							</div>
+							<!-- End Item Details -->
+
+							<!-- Start Search Result From -->
+							<div class="search-result-from search-result-from--flex-order">
+								<div class="search-result-item__time">
+									11:15
+								</div>
+							
+
+								<div class="search-result-item__airport search-result-item__right-arrow search-result-item__right-arrow--white-light-grey flex-left-center">
+									Beijing
+								</div>
+							</div>
+							<!-- End Search Result From -->
+
+							<!-- Start Search Result To -->
+							<div class="search-result-from-to search-result-from-to--flex-order">
+								<div class="search-result-item__time">
+									15:00
+								</div>
+
+								<div class="search-result-item__airport search-result-item__airport--padding flex-left-center">
+									Yokohama
+								</div>
+							</div>
+							<!-- End Search Result To -->
+
+							<!-- Start Search Result Trip Time -->
+							<div class="search-result-from-time search-result-from-time--flex-order">
+								<div class="search-result-item__trip-time flex-center-center search-result-item__trip-time--padding search-result-item__right-arrow search-result-item__right-arrow--white-dark-grey">
+									<span class="visible-sm">Flight Time:&nbsp;</span> 4h 15m
+								</div>
+							</div>
+							<!-- End Search Result Trip Time -->
+ 
+							<div class="search-result-item__select-btn search-result-item__select-btn--flex-order">
+								<a href="#" class="margin-10 float-right">
+									<span>Select</span> 
+									<i class="icon-keyboard_arrow_right"></i>
+								</a>
+							</div>
+
+						</div>
+						<!-- End Seatch Result Item -->
+
+
+
+						</div>
+						<!-- End Seatch Result Item -->
+					</div>
+					<!-- End Search Result BLock -->
+				</div>
+
+			</div> <!-- .row -->
+		</div> <!-- .container -->
+		
+
+		<!-- Start Result Item Themplate -->
+		<div class="search-result-item flex-bottom margin-bottom-10 search-result-item-themplate hidden">
+							
+			<!-- Start Item Details -->
+			<div class="search-result-info">
+				<div class="search-result-info__price flex-column flex-space-around">
+					95 &euro;
+				</div>
+				
+				<div class="search-result-info__company flex-wrap flex-column flex-space-around">
+					<div class="search-result-info__title">Company</div>
+
+					<div class="">
+						<img src="https://images.kiwi.com/airlines/64/FR.png" alt="">
+						<strong>Ryanair</strong>
+					</div>
+				</div>
+
+				<div class="search-result-info__class flex-column flex-space-around">
+					<div class="search-result-info__title">Class</div>
+					<strong>Busines</strong>	
+				</div>
+
+				<div class="search-result-info__date flex-column flex-space-around">
+					<div class="search-result-info__title">Date</div>
+					<strong>10/17/2017</strong>	
+				</div>
+
+			</div>
+			<!-- End Item Details -->
+
+			<!-- Start Search Result From -->
+			<div class="search-result-from search-result-from--flex-order">
+				<div class="search-result-item__time">
+					17:00
+				</div>
+			
+
+				<div class="search-result-item__airport search-result-item__right-arrow search-result-item__right-arrow--white-light-grey flex-left-center">
+					Long Beach
+				</div>
+			</div>
+			<!-- End Search Result From -->
+
+			<!-- Start Search Result To -->
+			<div class="search-result-from-to search-result-from-to--flex-order">
+				<div class="search-result-item__time">
+					21:00
+				</div>
+
+				<div class="search-result-item__airport search-result-item__airport--padding flex-left-center">
+					New York
+				</div>
+			</div>
+			<!-- End Search Result To -->
+
+			<!-- Start Search Result Trip Time -->
+			<div class="search-result-from-time search-result-from-time--flex-order">
+				<div class="search-result-item__trip-time flex-center-center search-result-item__trip-time--padding search-result-item__right-arrow search-result-item__right-arrow--white-dark-grey">
+					<span class="visible-sm">Flight Time:&nbsp;</span> 5h 26m
+				</div>
+			</div>
+			<!-- End Search Result Trip Time -->
+
+			<div class="search-result-item__select-btn search-result-item__select-btn--flex-order">
+				<a href="#" class="margin-10 float-right">
+					<span>Select</span> 
+					<i class="icon-keyboard_arrow_right"></i>
+				</a>
+			</div>
+
+		</div>
+		<!-- End Result Item Themplate -->
+		
+	</section>
+
+
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+
+
+
+	<script src="libs/jquery-datepicker/jquery-ui.min.js"></script>
+	<script src="libs/select2-4.0.4/js/select2.min.js"></script>
+	<script src="js/common.js"></script>
+	
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
